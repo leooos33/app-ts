@@ -3,6 +3,7 @@ import React from "react"
 import { injected } from "../web3/connectors"
 
 import logo from './logo.svg'
+//import active from './active.svg'
 
 const Header = () => {
     const { activate } = useWeb3React()
@@ -31,8 +32,8 @@ const Header = () => {
                             </ul>
                         </div>
                     </nav>
-                        <button className="hidden md:block pb-2 bg-transparent text-white font-sans font-medium text-xl pt-2 pb-3 px-10 border-orange1 border-2 hover:border-transparent rounded-full "
-                            onClick={() => activate(injected)}>
+                        <button className="flex-shrink-0 inline-flex bg-transparent text-white font-sans font-medium text-xl py-1.5 px-10 border-orange1 border-2 hover:border-transparent rounded-full "
+                            onClick={() => activate(injected)}> 
                         { account ? (
                             `${account.substring(0, 6)}...${account.substring(account.length - 4)}`
                         ) : (

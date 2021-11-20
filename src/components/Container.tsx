@@ -1,18 +1,12 @@
-import classnames from "classnames"
 import React from "react"
 
-import { jumboClass } from "../classes"
-
-const Container = ({ padding = true, full = false, className = "", ...props }) => (
-    <div className={classnames(
-        "flex flex-col justify-center",
-        "rounded-2xl",
-        full ? "w-full" : jumboClass,
-        "bg-white",
-        padding && "p-8",
-        "shadow-lg",
-        className
-    )} {...props} />
-)
-
+const Container = ({ children }) => {
+    return (
+        <form className="w-full ">
+            <div className="flex items-center border-b border-t border-gray1-g66 py-1">
+            {children}
+            </div>
+        </form>
+    )
+}
 export default Container
