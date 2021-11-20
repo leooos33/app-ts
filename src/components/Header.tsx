@@ -6,9 +6,7 @@ import logo from './logo.svg'
 
 const Header = () => {
     const { activate } = useWeb3React()
-    const { active } = useWeb3React()
-    //const triedEager = useEagerConnect() TODO
-    //useInactiveListener(!triedEager)      TODO
+    const { account } = useWeb3React()
 
     return (
         <header className="flex flex-wrap place-items-center">
@@ -23,26 +21,26 @@ const Header = () => {
                             height="33px"
                             />
                         </button>
-                <nav className="hidden lg:flex px-4 mx-auto  text-2xl space-x-6 font-sans font-medium">
-                    <div className="w-1/2 mx-auto">
-                        <ul id="tabs" className="inline-flex w-full  font-semibold text-gray1-g75">
-                          <li className="px-4 py-2 -mb-px  text-white border-b-2 border-white ">Trade</li>
-                          <li className="px-4 py-2">Portfolio</li>
-                          <li className="px-4 py-2">Charts</li>
-                          <li className="px-4 py-2">Docs</li>
-                        </ul>
+                    <nav className="hidden lg:flex px-4 mx-auto  text-2xl space-x-6 font-sans font-medium">
+                        <div className="w-1/2 mx-auto">
+                            <ul id="tabs" className="inline-flex w-full  font-semibold text-gray1-g75">
+                            <li className="px-4 py-2 -mb-px  text-white border-b-2 border-white ">Trade</li>
+                            <li className="px-4 py-2">Portfolio</li>
+                            <li className="px-4 py-2">Charts</li>
+                            <li className="px-4 py-2">Docs</li>
+                            </ul>
+                        </div>
+                    </nav>
+                        <button className="hidden md:block pb-2 bg-transparent text-white font-sans font-medium text-xl pt-2 pb-3 px-10 border-orange1 border-2 hover:border-transparent rounded-full "
+                            onClick={() => activate(injected)}>
+                        { account ? (
+                            `${account.substring(0, 6)}...${account.substring(account.length - 4)}`
+                        ) : (
+                        'Connect wallet'
+                        ) }
+                        </button>
                     </div>
                 </nav>
-                <button className="hidden md:block pb-2 bg-transparent text-white font-sans font-medium text-xl pt-2 pb-3 px-10 border-orange1 border-2 hover:border-transparent rounded-full "
-                    onClick={() => activate(injected)}>
-                { active ? (
-                    '1' //TODO
-                ) : (
-                'Connect wallet'
-                ) }
-                </button>
-                </div>
-            </nav>
             </section>
         </header>
     )
