@@ -1,15 +1,15 @@
 import React from "react"
 
-import TokenButton from './TokenButton'
-import Input from "./Input"
+import TokenButtonTo from './TokenButtonTo'
+import InputTo from "./InputTo"
 import Container from "./Container"
 
 
 const SwapToForm = () => {
     return (
         <Container>
-            <TokenButton />
-            <Input />
+            <TokenButtonTo />
+            <InputTo />
         </Container>
     )
 }

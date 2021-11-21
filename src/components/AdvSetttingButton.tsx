@@ -4,7 +4,7 @@ import expand_more from './assets/expand_more.svg'
 
 const AdvSettingsButton = () => {
     return (
-        <button className="items-end ml-auto inline-flex  text-sm lg:w-5/12 pl-9 font-semibold text-white pt-2" type="button">
+        <button className="items-end ml-auto inline-flex  text-sm lg:w-5/12 pl-8 font-semibold text-white pt-2" type="button">
         Advanced settings
         <img
           className="object-cover object-center"

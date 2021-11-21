@@ -1,18 +1,19 @@
-import React from "react"
+import React, {useContext} from "react"
+import {ContextApp} from "../App";
 
-import TokenButton from './TokenButton'
 import MaxButton from './MaxButton'
-import Input from "./Input"
+import InputFrom from "./InputFrom"
 import Container from "./Container"
-
+import TokenButtonFrom from "./TokenButtonFrom";
 
 const SwapFromForm = () => {
+    const {state, changeState} = useContext(ContextApp);
     return (
-        <Container>
-            <TokenButton />
-            <MaxButton />
-            <Input />
-        </Container>
+    <Container>
+        <TokenButtonFrom />
+        <MaxButton />
+        <InputFrom />
+    </Container>
     )
 }
 export default SwapFromForm
