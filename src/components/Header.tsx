@@ -2,7 +2,7 @@ import { useWeb3React } from "@web3-react/core"
 import React from "react"
 import { injected } from "../web3/connectors"
 
-import logo from './logo.svg'
+import logo from './assets/logo.svg'
 //import active from './active.svg'
 
 const Header = () => {
@@ -22,7 +22,7 @@ const Header = () => {
                             height="33px"
                             />
                         </button>
-                    <nav className="hidden lg:flex px-4 mx-auto  text-2xl space-x-6 font-sans font-medium">
+                    <nav className="hidden lg:flex px-4 mx-auto text-2xl space-x-6 font-sans font-medium">
                         <div className="w-1/2 mx-auto">
                             <ul id="tabs" className="inline-flex w-full  font-semibold text-gray1-g75">
                             <li className="px-4 py-2 -mb-px  text-white border-b-2 border-white ">Trade</li>

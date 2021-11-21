@@ -11,6 +11,13 @@ import Header from './components/Header';
 //import { BrowserRouter as Router, Route } from "react-router-dom"
 import Swap from './components/Swap.tsx';
 
+const Background = ({children}) => {
+    return (
+        <div className="absolute w-screen h-screen bg-black1">
+        {children}
+        </div>
+    )
+}
 
 function App() {
 
@@ -19,10 +26,10 @@ function App() {
 
     return (
         <StoreProvider store={store}>
-            <div className="absolute w-screen h-screen bg-black1">
-            <Header />
-            <Swap />
-            </div>
+            <Background>
+                <Header />
+                <Swap />
+            </Background>
         </StoreProvider>
     );
 }
