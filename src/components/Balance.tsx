@@ -36,7 +36,7 @@ const Balance = () => {
         <span className="mr-3 inline-flex items-center ml-auto leading-none pr-3 py-1 ">
         { account ? 
         (
-        balance === null ? 'Error' : balance ? `Balance: ${formatEther(balance)} ETH` : ''
+        balance === null ? 'Error' : balance ? `Balance: ${formatEther(balance).substring(0, 5)} ETH` : ''
         ) : (
         'Balance: --'
         ) }
