@@ -4,7 +4,7 @@ import Balance from "./Balance"
 
 const SwapHeader = () => {
     return (
-        <div className="flex items-center flex-wrap pb-2 border-gray-800 pl-3 mt-auto w-full">
+        <div className="flex items-center flex-wrap pb-2 pl-3 mt-auto w-full">
             <span className="inline-flex items-center">
             Swap from:
             </span>
