@@ -38,7 +38,8 @@ const MaxButton = () => {
     return (
         <div>
           {account ? (
-                    <button className="flex-shrink-0 inline-flex text-sm font-bold font-mono text-gray1-g66 py-0.5 border px-2.5 border-gray1-g66 rounded hover:border-orange1 hover:text-orange1" type="button" 
+                    <button className="flex-shrink-0 inline-flex text-sm font-bold font-mono text-gray1-g66 py-0.5 border px-2.5 border-gray1-g66 rounded hover:border-orange1 hover:text-orange1" 
+                    type="button" 
                     onClick={() => changeState({type: ActionType.CHANGE, payload: {
                       toToken: state?.toToken, 
                       fromToken: state?.fromToken, 
@@ -48,7 +49,8 @@ const MaxButton = () => {
                       MAX
                     </button>
                     ) : (
-                    <button className="flex-shrink-0 inline-flex text-sm font-bold font-mono text-gray1-g66 py-0.5 border px-2.5 border-gray1-g66 rounded" type="button">
+                    <button className="flex-shrink-0 inline-flex text-sm font-bold font-mono text-gray1-g66 py-0.5 border px-2.5 border-gray1-g66 rounded" 
+                    type="button">
                     MAX
                   </button>
           ) }
