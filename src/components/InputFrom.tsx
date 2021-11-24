@@ -1,6 +1,5 @@
 import React, {useContext} from "react"
 import {ContextApp} from "../App";
-import {ActionType} from "../types/stateType";
 
 const InputFrom = () => {
     const {state, changeState} = useContext(ContextApp);
@@ -13,12 +12,9 @@ const InputFrom = () => {
         autoComplete = "off" 
         value = {state?.fromAmount !== 0 ? state?.fromAmount : ''}
 
-        onChange={(e) => changeState(({type: ActionType.CHANGE, 
-            payload: {
-            toToken: state?.toToken, 
-            fromToken: state?.fromToken, 
+        onChange={(e) => changeState(({
             fromAmount: parseFloat(e.target.value), 
-            toAmount: state?.toAmount }})) } 
+           })) } 
         />
     )
 }
