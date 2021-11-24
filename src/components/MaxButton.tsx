@@ -4,7 +4,6 @@ import { useWeb3React } from "@web3-react/core"
 import { formatEther } from '@ethersproject/units'
 
 import {ContextApp} from "../App";
-import {ActionType} from "../types/stateType";
 
 const MaxButton = () => {
   const {state, changeState} = useContext(ContextApp);
@@ -40,12 +39,9 @@ const MaxButton = () => {
           {account ? (
                     <button className="flex-shrink-0 inline-flex text-sm font-bold font-mono text-gray1-g66 py-0.5 border px-2.5 border-gray1-g66 rounded hover:border-orange1 hover:text-orange1" 
                     type="button" 
-                    onClick={() => changeState({type: ActionType.CHANGE, payload: {
-                      toToken: state?.toToken, 
-                      fromToken: state?.fromToken, 
-                      fromAmount: formatEther(balance), 
-                      toAmount: state?.toAmount 
-                    }})}>
+                    onClick={() => changeState({
+                      fromAmount: formatEther(balance)
+                    })}>
                       MAX
                     </button>
                     ) : (

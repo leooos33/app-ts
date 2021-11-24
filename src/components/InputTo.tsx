@@ -1,6 +1,5 @@
 import React, {useContext} from "react"
 import {ContextApp} from "../App";
-import {ActionType} from "../types/stateType";
 
 const InputTo = () => {
     const {state, changeState} = useContext(ContextApp);
