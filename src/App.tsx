@@ -33,7 +33,7 @@ const App: React.FC = () => {
         fromToken: "ABC",
         toToken: "XYZ",
         fromAmount: 0,
-        toAmount: 10
+        toAmount: 0.875491717521170868*2
     }
 
     const[state, changeState] = useReducer<React.Reducer<State, Action>>(SwapReducer, initialState)

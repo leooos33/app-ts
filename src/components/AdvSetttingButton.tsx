@@ -1,16 +1,17 @@
 import React from "react"
 
-import expand_more from './assets/expand_more.svg'
+import expand_more from './assets/expand_more_a.svg'
 
 const AdvSettingsButton = () => {
     return (
-        <button className="items-end ml-auto inline-flex  text-sm lg:w-5/12 pl-8 font-semibold text-white pt-2" type="button">
+        <button className="items-end ml-auto inline-flex text-md lg:w-5/12 pl-5 font-semibold text-gray1-g66 pt-2" type="button">
         Advanced settings
         <img
           className="object-cover object-center"
-          src={expand_more} alt={"expand_more"}
-          width="18px"
-          height="18px"
+          
+          src={expand_more} alt={"expand_more_a"}
+          width="20px"
+          height="20px"
         />
       </button>
     )
