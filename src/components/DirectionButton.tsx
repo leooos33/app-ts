@@ -1,10 +1,10 @@
 import React, {useContext} from "react"
-import {ContextApp} from "../App";
+import {ContextSwap} from "../App";
 
 import direction from './assets/direction.svg'
 
 const DirectionButton = () => {
-    const {state, changeState} = useContext(ContextApp);
+    const {state, changeState} = useContext(ContextSwap);
     return (
         <button onClick={() => changeState({
             toToken: state?.fromToken, 

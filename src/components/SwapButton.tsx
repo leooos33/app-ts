@@ -1,11 +1,11 @@
 import React, {useContext} from "react"
-import {ContextApp} from "../App";
+import {ContextSwap} from "../App";
 
 const SwapButton = () => {
-    const {state, changeState} = useContext(ContextApp);
+    const {state, changeState} = useContext(ContextSwap);
     return (
         <ButtonSwapContainer>
-        {state?.fromAmount !== 0 ? 'Confirm' : 'Enter an amount'}
+        {state?.fromAmount !== 0 ? ('Confirm') : 'Enter an amount'}
         </ButtonSwapContainer>
     )
 }

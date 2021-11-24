@@ -3,10 +3,10 @@ import React, {useContext} from "react"
 import { useWeb3React } from "@web3-react/core"
 import { formatEther } from '@ethersproject/units'
 
-import {ContextApp} from "../App";
+import {ContextSwap} from "../App";
 
 const MaxButton = () => {
-  const {state, changeState} = useContext(ContextApp);
+  const {state, changeState} = useContext(ContextSwap);
 
   const { account, library, chainId } = useWeb3React()
   
