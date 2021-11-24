@@ -1,4 +1,4 @@
-import React, {useReducer, useContext} from 'react';
+import React, {useReducer} from 'react';
 
 import { useEagerConnect } from './hooks/useEagerConnect';
 import { useInactiveListener } from './hooks/useInactiveListener';
@@ -8,7 +8,8 @@ import Header from './components/Header';
 //import { BrowserRouter as Router, Route } from "react-router-dom"
 import Swap from './components/Swap';
 
-export const ContextApp = React.createContext(null);
+export const ContextSwap = React.createContext();
+
 
 interface SwapState {
     fromToken: string;
@@ -31,17 +32,17 @@ const App: React.FC = () => {
             fromToken: "ABC",
             toToken: "XYZ",
             fromAmount: 0,
-            toAmount: 0.875491717521170868*2
+            toAmount: 1
         }
       );
   
     return (
-        <ContextApp.Provider value={{state, changeState}}>
+        <ContextSwap.Provider value={{state, changeState}}>
             <Background>
                 <Header />
-                <Swap />
+                <Swap />         
             </Background>
-        </ContextApp.Provider>
+        </ContextSwap.Provider>
     );
 }
 
