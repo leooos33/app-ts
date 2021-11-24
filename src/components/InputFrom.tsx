@@ -1,5 +1,4 @@
-import { id } from "@ethersproject/hash";
-import React, {useContext, useCallback} from "react"
+import React, {useContext} from "react"
 import {ContextApp} from "../App";
 import {ActionType} from "../types/stateType";
 
@@ -12,7 +11,7 @@ const InputFrom = () => {
         min = "0"
         placeholder = '0.0'
         autoComplete = "off" 
-        value = {state?.fromAmount != 0 ? state?.fromAmount : ''}
+        value = {state?.fromAmount !== 0 ? state?.fromAmount : ''}
 
         onChange={(e) => changeState(({type: ActionType.CHANGE, 
             payload: {
