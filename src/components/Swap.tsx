@@ -24,7 +24,9 @@ const Swap = () => (
     <div className="container mx-auto flex px-5 pt-20 items-center justify-center flex-col">
         <SwapBody />
         <AdvSettingsButton />
+
         <SwapButton />
+        
     </div>
   </div>
 )

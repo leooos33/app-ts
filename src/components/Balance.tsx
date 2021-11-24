@@ -7,6 +7,7 @@ const Balance = () => {
     const { account, library, chainId } = useWeb3React()
   
     const [balance, setBalance] = React.useState()
+
     React.useEffect((): any => {
       if (!!account && !!library) {
         let stale = false
@@ -33,14 +34,12 @@ const Balance = () => {
   
     return (
       <>
-        <span className="mr-3 inline-flex items-center ml-auto leading-none pr-3 py-1 ">
-        { account ? 
+      { account ? 
         (
-        balance === null ? 'Error' : balance ? `Balance: ${formatEther(balance).substring(0, 5)} ETH` : ''
+        balance === null ? 'Error' : balance ? (`${formatEther(balance).substring(0, 5)}`) : ''
         ) : (
-        'Balance: --'
+        '--'
         ) }
-          </span>
       </>
       )
   }
