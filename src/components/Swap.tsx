@@ -8,7 +8,7 @@ import SwapForm from "./SwapForm"
 
 const SwapBody = () => {
   return(
-    <div className="lg:w-5/12 pl-14 w-full">
+    <div className="lg:w-2/5 w-full">
       <SwapHeader />
       <SwapForm isFrom = {true} />       
 
