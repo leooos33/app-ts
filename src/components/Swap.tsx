@@ -26,7 +26,6 @@ const Swap = () => (
         <AdvSettingsButton />
 
         <SwapButton />
-        
     </div>
   </div>
 )

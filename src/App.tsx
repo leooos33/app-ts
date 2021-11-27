@@ -4,8 +4,6 @@ import { useEagerConnect } from './hooks/useEagerConnect';
 import { useInactiveListener } from './hooks/useInactiveListener';
 
 import Header from './components/Header';
-//import GlobalModal from './components/GlobalModal';
-//import { BrowserRouter as Router, Route } from "react-router-dom"
 import Swap from './components/Swap';
 
 export const ContextSwap = React.createContext();
@@ -16,6 +14,8 @@ interface SwapState {
     toToken: string;
     fromAmount: number;
     toAmount: number;
+    price: number
+    allowance: number
   }
 
 const App: React.FC = () => {
@@ -31,8 +31,10 @@ const App: React.FC = () => {
         {
             fromToken: "ABC",
             toToken: "XYZ",
-            fromAmount: 0,
-            toAmount: 1
+            fromAmount: 1,
+            toAmount:  10002.5,
+            price: 0,
+            allowance: 0
         }
       );
   

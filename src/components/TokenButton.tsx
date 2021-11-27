@@ -22,7 +22,7 @@ const TokenButton = ({isFrom}:{isFrom: boolean}) => {
       onClick={() => setShowModal(true)}>
       <img
       className="object-cover object-center mx-3"
-      src = {isFrom ? (USDC) : (DAI)} //TODO
+      src = {isFrom ? (USDC) : (DAI)} alt = '' //TODO 
       width="30x"
       height="30px"
       />
@@ -58,7 +58,7 @@ const TokenButton = ({isFrom}:{isFrom: boolean}) => {
               onClick={() => setShowModal(false)}>
             <img
             className="object-cover object-center rounded"
-            src={highlight_off}
+            src={highlight_off} alt = ''
             width="30px"
             height="30px"
             />
@@ -71,7 +71,7 @@ const TokenButton = ({isFrom}:{isFrom: boolean}) => {
             <div className="flex items-center border-b border-t border-gray1-g66 mx-5 py-3">
             <img
             className="object-cover object-center "
-            src ={search}
+            src ={search} alt = ''
             width="30x"
             height="30px"
             />
@@ -87,7 +87,7 @@ const TokenButton = ({isFrom}:{isFrom: boolean}) => {
         <div className = "flex my-1 py-2 text-lg text-white">
         <img
             className="object-center mr-2"
-            src ={USDC}
+            src ={USDC} alt = ''
             width="30x"
             height="30px"
             />
@@ -105,7 +105,7 @@ const TokenButton = ({isFrom}:{isFrom: boolean}) => {
 >
         <img
             className="object-center mr-2"
-            src ={DAI}
+            src ={DAI} alt=''
             width="30x"
             height="30px"
             />
